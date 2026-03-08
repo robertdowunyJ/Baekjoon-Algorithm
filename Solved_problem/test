@@ -1,9 +1,4 @@
-import sys
-input = sys.stdin.readline
+a = list(input())
+n = int(input())
 
-T = int(input())
-
-
-for i in range(T):
-    a,b=map(int,input().split())
-    print(a+b)
+print(a[n-1])
