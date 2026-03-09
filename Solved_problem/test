@@ -1,9 +1,10 @@
-import sys
-input = sys.stdin.readline
+a = int(input())
+b = int(input())
+c = int(input())
 
-T = int(input())
+mult = a*b*c
 
+lst = list(str(mult))
 
-for i in range(T):
-    a,b=map(int,input().split())
-    print(a+b)
+for i in range(10):
+    print(lst.count(str(i)))
