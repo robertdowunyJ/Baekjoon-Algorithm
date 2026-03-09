@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 a = int(input())
 b = int(input())
 c = int(input())
@@ -8,3 +9,9 @@ lst = list(str(mult))
 
 for i in range(10):
     print(lst.count(str(i)))
+=======
+a = list(input())
+n = int(input())
+
+print(a[n-1])
+>>>>>>> 2ef65bb44a38ef0a0e5d0aed24e65586ec2cb0d3
