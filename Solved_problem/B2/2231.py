@@ -61,18 +61,19 @@ f =0
 for i in range(1,n):
     sum_val = 0
     k = i ##208이 들어옴
-    while True:
+    while True:              
         if k//10 == 0: #
             sum_val += k%10
             break
         sum_val += k % 10
         k = k //10 #각자리수 합 
 
-    if sum_val+ i == n:
+    if sum_val+ i == n:  
         print(i)
         f=1
         break
 if f==0:
     print("0")
             
-    
+
+ ## sum_val = sum(map(int, str(i))) -> while문 로직 한줄이면 끝남

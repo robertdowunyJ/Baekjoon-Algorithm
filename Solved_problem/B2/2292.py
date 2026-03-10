@@ -13,6 +13,7 @@ while True:
     k += 6*cnt #첨에 k = 7
     if n ==1:
        print("1")
+       break
     else: 
         if n <= k:
             print(cnt+1)
