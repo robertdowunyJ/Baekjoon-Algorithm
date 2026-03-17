@@ -1,23 +1,24 @@
-cnt_0 = 0
-cnt_1 = 0
-
-def fibonacci(n):
-    if n == 0:
-        cnt_0 +=1
-        return 
-    elif n ==1:
-        cnt_1 +=1
-        return
-    else:
-        return fibonacci(n-1)+fibonacci(n-2)
-    
-
-
+"""
+0 / 1 0
+1 / 0 1
+2 / 1 1
+3 / 1 2
+4 / 2 3
+5 / 3 5
+6 / 5 8
+7 / 8 13
+"""
 t = int(input())
-
 for i in range(t):
     a = int(input())
-    fibonacci(a)
-    print(cnt_0,cnt_1)
-    cnt_0 = 0
-    cnt_1 = 0
+    m1 , m2 = 1,0
+    x,y = 1, 0
+    
+    for j in range(1,a+1):
+        m1 = y
+        m2 = x+y
+        x = m1
+        y = m2  
+    print(m1,m2)
+    
+            
