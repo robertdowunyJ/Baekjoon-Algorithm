@@ -4,15 +4,18 @@ n,m = map(int,input().split())
 
 lst = list(map(int,input().split()))
 
-sum_list = []
 sum_val = 0
 
-for _ in range(m):
+for s in range(m):
     k,j = map(int,input().split())
-    for i in range(0,n+1):
-        if i == 0:
-            sum_list.append(sum_val)
-            continue
-        sum_val = sum_val + lst[i-1]
-        sum_list.append(sum_val)
-    print(sum_list[j] - sum_list[k-1])
+    sum_val = lst[0]
+    if s == 0:
+        for i in range(1,n):
+            sum_val = lst[i-1]+lst[i] #lst[0]+lst[1]
+            lst[i] = sum_val
+
+    if k == 1:
+        print(lst[j-1])
+    else:
+        print(lst[j-1]-lst[k-2])
+    ##lst 업뎃됨..?
