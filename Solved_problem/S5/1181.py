@@ -1,5 +1,5 @@
 import sys
-sys.stdin.readline
+input = sys.stdin.readline
 
 n = int(input())
 lst = dict()
@@ -9,6 +9,7 @@ for i in range(n):
     k = len(a)
     lst[a] = k
 
-sorted(lst.items(),key=lambda x:x[1])
-print(lst)         
+lst = sorted(lst.items(),key=lambda x:(x[1],x[0]))
+for word,length in lst:
+    print(word)      
     
